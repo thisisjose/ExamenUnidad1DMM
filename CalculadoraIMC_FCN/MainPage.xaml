@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraIMC_FCN.MainPage">
+        <StackLayout>
+            <StackLayout>
+                <Label Text="CALCULAR IMC Y FCN" HorizontalOptions="Center" VerticalOptions="Center" FontSize="25" FontAttributes="Bold" TextColor="Black"/>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Puedes seleccionar entre calcular indicie de Masa Corporal(IMC) y tu Frecuencia Cardiaca Normal(FCN)" TextColor="Black" Margin="40,20,0,0"></Label>
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Opciones" Margin="0,20,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20"></Label>
+            </StackLayout>
+            <StackLayout>
+                <RadioButton TextColor="Black" Margin="0,20,0,0" Content="IMC" ></RadioButton>
+                <RadioButton TextColor="Black" Margin="0,20,0,0" Content="FCN" Grid.Row="3" Grid.Column="3"></RadioButton>
+
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Proporcionar datos" Margin="0,20,0,0" TextColor="Black" FontAttributes="Bold" FontSize="20" ></Label>
+            </StackLayout>
+            <Label Text="Peso" TextColor="Black" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+        <Entry HeightRequest="60" Placeholder="Peso(kg)" x:Name="Peso" Keyboard="Numeric" Text="{Binding Peso}" ></Entry>
+            <Label Text="Altura" TextColor="Black" FontAttributes="Bold" FontSize="15" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+        <Entry HeightRequest="60" Placeholder="Altura(m)" x:Name="Altura" Keyboard="Numeric" Text="{Binding Altura}" ></Entry>
+        <Button Command="{Binding BtnImc}" Text="CALCULAR"> </Button>
+        </StackLayout>
+</ContentPage>
